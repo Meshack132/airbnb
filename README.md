@@ -59,7 +59,10 @@ python scripts/view_db.py
 ## Sample Output
 The pipeline execution and data exploration interface:
 
-![ETL Pipeline Execution](image.png) 
+![ETL Pipeline Execution]
+![image](https://github.com/user-attachments/assets/0096597a-18cf-4bc9-94af-5a134c4c2f38)
+
+ 
 
 Key features shown:
 - Automatic coordinate generation
@@ -84,8 +87,12 @@ CREATE TABLE listings (
 );
 ```
 
-## License
-MIT License - see [LICENSE](LICENSE) file for details
+## About Me
+
+I'm Meshack, a developer passionate about Coding and learning 
+
+- GitHub: [@Meshack132](https://github.com/Meshack132)
+- LinkedIn: [Let's connect](https://www.linkedin.com/in/meshackmthimkhulu)
 
 ---
 
