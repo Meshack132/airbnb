@@ -1,0 +1,5 @@
+pandas
+jupyter
+matplotlib
+seaborn
+sqlite3  # Native, no install needed
