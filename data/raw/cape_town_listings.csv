@@ -1,0 +1,4 @@
+id,name,host_name,neighbourhood,room_type,price,number_of_reviews,availability_365
+1001,Seaside Apartment in Muizenberg,John,Muizenberg,Entire home/apt,850,42,180
+1002,Cozy Studio in City Bowl,Mary,City Bowl,Private room,500,58,200
+1003,Camps Bay Villa with View,Richard,Camps Bay,Entire home/apt,2500,12,365

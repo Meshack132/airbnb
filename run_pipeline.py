@@ -1,8 +1,13 @@
 import logging
+from pathlib import Path
 from config.settings import CITIES
 from etl.extract import extract
 from etl.transform import transform
 from etl.load import load
+
+# Create required directories
+Path("logs").mkdir(parents=True, exist_ok=True)
+Path("db").mkdir(parents=True, exist_ok=True)
 
 logging.basicConfig(
     level=logging.INFO,

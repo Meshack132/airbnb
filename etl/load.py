@@ -1,3 +1,4 @@
+import pandas as pd
 import sqlalchemy as sa
 from sqlalchemy.dialects.sqlite import insert
 from config.settings import DB_PATH
@@ -5,11 +6,10 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def create_table(engine: sa.engine.Engine) -> None:
-    """Create table with proper schema if not exists"""
+def get_table_schema():
+    """Return SQLAlchemy table schema"""
     metadata = sa.MetaData()
-    
-    sa.Table(
+    return sa.Table(
         'listings',
         metadata,
         sa.Column('id', sa.Integer, primary_key=True),
@@ -24,28 +24,31 @@ def create_table(engine: sa.engine.Engine) -> None:
         sa.Column('city', sa.String(50)),
         sa.Column('ingestion_date', sa.DateTime),
     )
-    
-    metadata.create_all(engine)
 
 def load(df: pd.DataFrame) -> None:
-    """Upsert data to SQLite with conflict handling"""
+    """Upsert data with schema validation"""
     try:
         engine = sa.create_engine(f"sqlite:///{DB_PATH}")
+        table = get_table_schema()
         
         with engine.begin() as conn:
             # Create table if not exists
-            create_table(engine)
+            table.create(conn, checkfirst=True)
+            
+            # Get only columns that exist in the table
+            valid_columns = [c.name for c in table.columns]
+            df = df[valid_columns]
             
             # Upsert data
-            stmt = insert(sa.table('listings')).values(df.to_dict(orient='records'))
+            stmt = insert(table).values(df.to_dict(orient='records'))
             stmt = stmt.on_conflict_do_update(
                 index_elements=['id'],
-                set_={c.name: c for c in stmt.excluded if c.name not in ['id']}
+                set_={col: getattr(stmt.excluded, col) for col in valid_columns if col != 'id'}
             )
             
             conn.execute(stmt)
         
-        logger.info(f"Successfully loaded {len(df):,} records")
+        logger.info(f"Loaded {len(df)} records")
 
     except Exception as e:
         logger.error(f"Loading failed: {str(e)}")

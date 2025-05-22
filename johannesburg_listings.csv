@@ -1,0 +1,4 @@
+id,name,host_name,neighbourhood,room_type,price,number_of_reviews,availability_365
+2001,Sandton High-Rise Apartment,Lerato,Sandton,Entire home/apt,1200,33,150
+2002,Braamfontein Budget Room,Themba,Braamfontein,Shared room,300,76,220
+2003,Maboneng Loft,Ayanda,Maboneng,Entire home/apt,700,21,365

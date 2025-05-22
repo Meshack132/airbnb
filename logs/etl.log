@@ -1,0 +1,30 @@
+2025-05-22 18:55:57,620 - etl.extract - ERROR - Extraction failed: Data file missing: C:\Users\Alsfine\dev work\airbnb\data\raw\cape_town_listings.csv
+2025-05-22 18:55:57,620 - root - ERROR - Pipeline failed for cape_town: Data file missing: C:\Users\Alsfine\dev work\airbnb\data\raw\cape_town_listings.csv
+2025-05-22 18:55:57,620 - etl.extract - ERROR - Extraction failed: Data file missing: C:\Users\Alsfine\dev work\airbnb\data\raw\johannesburg_listings.csv
+2025-05-22 18:55:57,620 - root - ERROR - Pipeline failed for johannesburg: Data file missing: C:\Users\Alsfine\dev work\airbnb\data\raw\johannesburg_listings.csv
+2025-05-22 19:00:32,665 - etl.extract - INFO - Extracted 3 rows from cape_town
+2025-05-22 19:00:32,665 - etl.transform - WARNING - Generating dummy coordinates for sample data
+2025-05-22 19:00:32,691 - etl.transform - INFO - Transformed 3 valid rows for cape_town
+2025-05-22 19:00:32,751 - etl.load - ERROR - Loading failed: set parameter dictionary must not be empty
+2025-05-22 19:00:32,751 - root - ERROR - Pipeline failed for cape_town: set parameter dictionary must not be empty
+2025-05-22 19:00:32,753 - etl.extract - INFO - Extracted 3 rows from johannesburg
+2025-05-22 19:00:32,753 - etl.transform - WARNING - Generating dummy coordinates for sample data
+2025-05-22 19:00:32,753 - etl.transform - INFO - Transformed 3 valid rows for johannesburg
+2025-05-22 19:00:32,753 - etl.load - ERROR - Loading failed: set parameter dictionary must not be empty
+2025-05-22 19:00:32,753 - root - ERROR - Pipeline failed for johannesburg: set parameter dictionary must not be empty
+2025-05-22 19:07:18,653 - etl.extract - INFO - Extracted 3 rows from cape_town
+2025-05-22 19:07:18,657 - etl.transform - WARNING - Generating dummy coordinates
+2025-05-22 19:07:18,685 - etl.transform - INFO - Transformed 3 valid rows for cape_town
+2025-05-22 19:07:18,739 - etl.load - INFO - Loaded 3 records
+2025-05-22 19:07:18,743 - etl.extract - INFO - Extracted 3 rows from johannesburg
+2025-05-22 19:07:18,743 - etl.transform - WARNING - Generating dummy coordinates
+2025-05-22 19:07:18,747 - etl.transform - INFO - Transformed 3 valid rows for johannesburg
+2025-05-22 19:07:18,779 - etl.load - INFO - Loaded 3 records
+2025-05-22 19:19:29,930 - etl.extract - INFO - Extracted 3 rows from cape_town
+2025-05-22 19:19:29,930 - etl.transform - WARNING - Generating dummy coordinates
+2025-05-22 19:19:29,939 - etl.transform - INFO - Transformed 3 valid rows for cape_town
+2025-05-22 19:19:29,968 - etl.load - INFO - Loaded 3 records
+2025-05-22 19:19:29,973 - etl.extract - INFO - Extracted 3 rows from johannesburg
+2025-05-22 19:19:29,973 - etl.transform - WARNING - Generating dummy coordinates
+2025-05-22 19:19:29,978 - etl.transform - INFO - Transformed 3 valid rows for johannesburg
+2025-05-22 19:19:30,002 - etl.load - INFO - Loaded 3 records
