@@ -1,5 +1,2 @@
-pandas
-jupyter
-matplotlib
-seaborn
-sqlite3  # Native, no install needed
+conda env create -f environment.yml
+conda activate myenv
