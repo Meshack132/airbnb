@@ -1,2 +1,8 @@
-conda env create -f environment.yml
-conda activate myenv
+env create -f environment.yml
+ activate myenv
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+pytest
